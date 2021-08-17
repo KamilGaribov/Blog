@@ -6,7 +6,6 @@ import Head from 'next/head'
 import { Container } from '../../components/container'
 import React, { FunctionComponent, useState, useRef, ChangeEvent } from 'react';
 import { useSelector } from 'react-redux'
-import { IState } from '../../reducer'
 
 
 interface IComment {
@@ -32,19 +31,6 @@ interface NewNoteInputProps {
 export default function Id({ data }: { data: IComplex }, { addNote }: { addNote: NewNoteInputProps }) {
     const { id, title, body }: IPost = data
     const comments: IComment[] = data.comments
-    const [newComments, setNewComments] = useState([])
-    const inputEl = useRef(null);
-    // const comments2 = useSelector<IState, IState['comments']>((state) => state.comments)
-    const [note, setNote] = React.useState("");
-
-    const updateNote = (event: ChangeEvent<HTMLInputElement>) => {
-        setNote(event.target.value);
-    };
-
-    const onAddNoteClick = () => {
-        addNote(note);
-        setNote("");
-    };
     return (
         <>
             <Head>
@@ -58,16 +44,10 @@ export default function Id({ data }: { data: IComplex }, { addNote }: { addNote:
                 <hr />
                 <form>
                     <label htmlFor="comment">Leave a comment</label>
-                    <input ref={inputEl} id="comment" placeholder="comment.." onChange={updateNote}></input>
-                    <button type="button" onClick={onAddNoteClick}>Add note</button>
+                    <input id="comment" placeholder="comment.."></input>
+                    <button type="button">Add note</button>
                 </form>
                 <ul>
-                    <ul>lenght: {note.length}</ul>
-                    {/* {note.map((item, i) => {
-                        return (
-                            <li key={i}>{item.body}</li>
-                        )
-                    })} */}
                     {comments.map((item, i) => {
                         return (
                             <li key={i}>{item.body}</li>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-interface IButton {
+export interface IButton {
     text: string;
     primary: boolean;
 }
