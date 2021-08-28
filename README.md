@@ -1,8 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Simple Blog Website
 
-Website is serving blog posts.
+Website is serving blog posts.  <br />
 User can create new post and can post a comment on posts.
 
 First, run the development server:
@@ -13,13 +11,14 @@ npm run dev
 yarn dev
 ```
 
+Open http://localhost:3000 with your browser to see the result.
 
 ## Technologies, tools Used
 
-React JS
-Next JS
-Typescript
-Redux thunk
-React Hooks
-styled-components
-ESLint and Prettier
+React JS <br />
+Next JS <br />
+Typescript <br />
+Redux thunk <br />
+React Hooks <br />
+styled-components <br />
+ESLint and Prettier <br />
